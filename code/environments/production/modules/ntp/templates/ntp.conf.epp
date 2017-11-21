@@ -1,0 +1,7 @@
+<% $ntp_regional_server.each |$server| { -%>
+server <%= $server %> iburst
+<% } -%>
+driftfile /var/lib/ntp/ntp.drift
+<% unless $monitor == true { -%>
+disable monitor
+<% } -%>

@@ -1,0 +1,7 @@
+<% @ntp_regional_server.each do |s| -%>
+server <%= s %> iburst
+<% end %>
+driftfile /var/lib/ntp/ntp.drift
+<% if @monitor == false -%>
+disable monitor
+<% end -%>

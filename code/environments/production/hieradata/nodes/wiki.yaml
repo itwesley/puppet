@@ -1,0 +1,8 @@
+---
+classes:
+  - mediawiki
+  - linux
+  - host_entries
+mediawiki::wikisitename: wiki
+mediawiki::wikimetanamespace: Wiki
+mediawiki::wikiserver: 172.31.0.202

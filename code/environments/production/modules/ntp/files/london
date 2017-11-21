@@ -1,0 +1,3 @@
+server time.stdtime.gov.tw iburst
+server uk.ntp.pool.org
+driftfile /var/lib/ntp/ntp.drift

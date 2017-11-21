@@ -1,0 +1,8 @@
+---
+classes:
+  - mediawiki
+  - linux
+  - host_entries
+mediawiki::wikisitename: wikitest
+mediawiki::wikimetanamespace: Wikitest
+mediawiki::wikiserver: 172.31.0.203
