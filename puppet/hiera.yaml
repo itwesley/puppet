@@ -2,7 +2,9 @@
 :backends:
   - yaml
 :hierarchy:
+  - "nodes/%{facts.networking.hostanme}"
   - "nodes/%{::trusted.certname}"
   - wikidefault 
+  - test
 :yaml:
   :datadir: "/etc/puppetlabs/code/environments/%{::environment}/hieradata"
