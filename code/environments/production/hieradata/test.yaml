@@ -1,2 +1,2 @@
 ---
-hiera_motd::message: "This is a hiera motd practice. (message from hiera key/value.)"
+hiera_motd::message: "This is linux system."
