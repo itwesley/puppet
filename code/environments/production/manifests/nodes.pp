@@ -31,45 +31,53 @@ class linux {
 }
 
 
-# wiki is centos
-node 'wiki' {
+## wiki is centos
+#node 'wiki' {
+#
+#  # Replaced by hiera, so mark below:
+#  #$wikisitename = 'wiki'
+#  #$wikimetanamespace = 'Wiki'
+#  #$wikiserver = 'http://172.31.0.202'
+#  #$wikidbname = 'wiki'
+#  #$wikidbuser = 'root'
+#  #$wikidbpassword = 'training'
+#  #$wikiupgradekey = 'puppet'
+#
+#  # Replaced by hiera, so mark below:
+#  #class { 'linux': }
+#  #class { 'mediawiki': }
+#
+#  # Use hiera
+#  hiera_include('classes')
+#
+#}
+#
+#
+## wikitest is ubuntu
+#node 'wikitest' {
+# 
+#  # Replaced by hiera, so mark below:
+#  #$wikisitename = 'wikitest'
+#  #$wikimetanamespace = 'Wikitest'
+#  #$wikiserver = 'http://172.31.0.203'
+#  #$wikidbname = 'wiki'
+#  #$wikidbuser = 'root'
+#  #$wikidbpassword = 'training'
+#  #$wikiupgradekey = 'puppet'
+#
+#  # Replaced by hiera, so mark below:
+#  #class { 'linux': }
+#  #class { 'mediawiki': }
+#
+#  # Use hiera
+#  hiera_include('classes')
+#
+#}
+#
+## or many nodes in one line below:
 
-  # Replaced by hiera, so mark below:
-  #$wikisitename = 'wiki'
-  #$wikimetanamespace = 'Wiki'
-  #$wikiserver = 'http://172.31.0.202'
-  #$wikidbname = 'wiki'
-  #$wikidbuser = 'root'
-  #$wikidbpassword = 'training'
-  #$wikiupgradekey = 'puppet'
+node 'wiki', 'wikitest' {
 
-  # Replaced by hiera, so mark below:
-  #class { 'linux': }
-  #class { 'mediawiki': }
-
-  # Use hiera
-  hiera_include('classes')
-
-}
-
-
-# wikitest is ubuntu
-node 'wikitest' {
- 
-  # Replaced by hiera, so mark below:
-  #$wikisitename = 'wikitest'
-  #$wikimetanamespace = 'Wikitest'
-  #$wikiserver = 'http://172.31.0.203'
-  #$wikidbname = 'wiki'
-  #$wikidbuser = 'root'
-  #$wikidbpassword = 'training'
-  #$wikiupgradekey = 'puppet'
-
-  # Replaced by hiera, so mark below:
-  #class { 'linux': }
-  #class { 'mediawiki': }
-
-  # Use hiera
   hiera_include('classes')
 
 }
