@@ -1,2 +1,2 @@
 ---
-hiera_motd::message: "This is linux system."
+hiera_motd::message: "This is linux system.\n"
